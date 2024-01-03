@@ -1,3 +1,16 @@
+.......................................................
+.#####################################################.
+.### COMMAND: pip install -U python-rocksdb==0.7.0 ###.
+.############## <inside indy-node repo> ##############.
+.#####################################################.
+.......................................................
+
+>> Problem ::> Problem in downloading rocksdb0.7.0 <when tried directly>
+
+######
+#LOGS#
+######
+
 Collecting python-rocksdb==0.7.0
   Using cached python-rocksdb-0.7.0.tar.gz (219 kB)
   Preparing metadata (setup.py): started
