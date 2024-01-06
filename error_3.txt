@@ -1,0 +1,191 @@
+Installed /home/psychopunk_sage/Hyperledger/Indy/.direnv/python-3.9.0/lib/python3.9/site-packages/indy_node-1.13.2rc6-py3.9.egg
+Processing dependencies for indy-node==1.13.2rc6
+Searching for python-rocksdb
+Reading https://pypi.org/simple/python-rocksdb/
+Downloading https://files.pythonhosted.org/packages/94/81/9a8e498a26ec34da9e1ae87e831468aedb4a6ba42aa9ea779b97896cfea7/python-rocksdb-0.7.0.tar.gz#sha256=aa692fbd06d8ed4ad641feee2970062fe01120e87b645a29403c71c628639e4f
+Best match: python-rocksdb 0.7.0
+Processing python-rocksdb-0.7.0.tar.gz
+Writing /tmp/easy_install-i65ijf53/python-rocksdb-0.7.0/setup.cfg
+Running python-rocksdb-0.7.0/setup.py -q bdist_egg --dist-dir /tmp/easy_install-i65ijf53/python-rocksdb-0.7.0/egg-dist-tmp-bnigw6b6
+/home/psychopunk_sage/Hyperledger/Indy/.direnv/python-3.9.0/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /tmp/easy_install-i65ijf53/python-rocksdb-0.7.0/rocksdb/_rocksdb.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+In file included from rocksdb/_rocksdb.cpp:776:
+/usr/local/include/rocksdb/slice.h:46:20: error: ‘string_view’ in namespace ‘std’ does not name a type
+   46 |   Slice(const std::string_view& sv) : data_(sv.data()), size_(sv.size()) {}
+      |                    ^~~~~~~~~~~
+/usr/local/include/rocksdb/slice.h:46:15: note: ‘std::string_view’ is only available from C++17 onwards
+   46 |   Slice(const std::string_view& sv) : data_(sv.data()), size_(sv.size()) {}
+      |               ^~~
+/usr/local/include/rocksdb/slice.h:95:8: error: ‘string_view’ in namespace ‘std’ does not name a type
+   95 |   std::string_view ToStringView() const {
+      |        ^~~~~~~~~~~
+/usr/local/include/rocksdb/slice.h:95:3: note: ‘std::string_view’ is only available from C++17 onwards
+   95 |   std::string_view ToStringView() const {
+      |   ^~~
+/usr/local/include/rocksdb/slice.h: In constructor ‘rocksdb::Slice::Slice(const int&)’:
+/usr/local/include/rocksdb/slice.h:46:48: error: request for member ‘data’ in ‘sv’, which is of non-class type ‘const int’
+   46 |   Slice(const std::string_view& sv) : data_(sv.data()), size_(sv.size()) {}
+      |                                                ^~~~
+/usr/local/include/rocksdb/slice.h:46:66: error: request for member ‘size’ in ‘sv’, which is of non-class type ‘const int’
+   46 |   Slice(const std::string_view& sv) : data_(sv.data()), size_(sv.size()) {}
+      |                                                                  ^~~~
+In file included from /usr/local/include/rocksdb/merge_operator.h:17,
+                 from rocksdb/_rocksdb.cpp:780:
+/usr/local/include/rocksdb/wide_columns.h: In constructor ‘rocksdb::WideColumn::WideColumn(std::piecewise_construct_t, NTuple&&, VTuple&&)’:
+/usr/local/include/rocksdb/wide_columns.h:52:20: error: ‘make_from_tuple’ is not a member of ‘std’
+   52 |       : name_(std::make_from_tuple<Slice>(std::forward<NTuple>(name_tuple))),
+      |                    ^~~~~~~~~~~~~~~
+/usr/local/include/rocksdb/wide_columns.h:52:20: note: ‘std::make_from_tuple’ is only available from C++17 onwards
+/usr/local/include/rocksdb/wide_columns.h:52:41: error: expected primary-expression before ‘>’ token
+   52 |       : name_(std::make_from_tuple<Slice>(std::forward<NTuple>(name_tuple))),
+      |                                         ^
+/usr/local/include/rocksdb/wide_columns.h:53:21: error: ‘make_from_tuple’ is not a member of ‘std’
+   53 |         value_(std::make_from_tuple<Slice>(std::forward<VTuple>(value_tuple))) {
+      |                     ^~~~~~~~~~~~~~~
+/usr/local/include/rocksdb/wide_columns.h:53:21: note: ‘std::make_from_tuple’ is only available from C++17 onwards
+/usr/local/include/rocksdb/wide_columns.h:53:42: error: expected primary-expression before ‘>’ token
+   53 |         value_(std::make_from_tuple<Slice>(std::forward<VTuple>(value_tuple))) {
+      |                                          ^
+In file included from rocksdb/_rocksdb.cpp:780:
+/usr/local/include/rocksdb/merge_operator.h: At global scope:
+/usr/local/include/rocksdb/merge_operator.h:165:32: error: ‘variant’ in namespace ‘std’ does not name a template type
+  165 |     using ExistingValue = std::variant<std::monostate, Slice, WideColumns>;
+      |                                ^~~~~~~
+/usr/local/include/rocksdb/merge_operator.h:165:27: note: ‘std::variant’ is only available from C++17 onwards
+  165 |     using ExistingValue = std::variant<std::monostate, Slice, WideColumns>;
+      |                           ^~~
+/usr/local/include/rocksdb/merge_operator.h:169:36: error: ‘ExistingValue’ has not been declared
+  169 |                                    ExistingValue&& _existing_value,
+      |                                    ^~~~~~~~~~~~~
+/usr/local/include/rocksdb/merge_operator.h:182:5: error: ‘ExistingValue’ does not name a type
+  182 |     ExistingValue existing_value;
+      |     ^~~~~~~~~~~~~
+/usr/local/include/rocksdb/merge_operator.h:191:27: error: ‘variant’ in namespace ‘std’ does not name a template type
+  191 |     using NewValue = std::variant<std::string, NewColumns, Slice>;
+      |                           ^~~~~~~
+/usr/local/include/rocksdb/merge_operator.h:191:22: note: ‘std::variant’ is only available from C++17 onwards
+  191 |     using NewValue = std::variant<std::string, NewColumns, Slice>;
+      |                      ^~~
+/usr/local/include/rocksdb/merge_operator.h:196:5: error: ‘NewValue’ does not name a type
+  196 |     NewValue new_value;
+      |     ^~~~~~~~
+/usr/local/include/rocksdb/merge_operator.h: In constructor ‘rocksdb::MergeOperator::MergeOperationInputV3::MergeOperationInputV3(const rocksdb::Slice&, int&&, const OperandList&, rocksdb::Logger*)’:
+/usr/local/include/rocksdb/merge_operator.h:173:11: error: class ‘rocksdb::MergeOperator::MergeOperationInputV3’ does not have any field named ‘existing_value’
+  173 |           existing_value(std::move(_existing_value)),
+      |           ^~~~~~~~~~~~~~
+In file included from /usr/local/include/rocksdb/cache.h:20,
+                 from /usr/local/include/rocksdb/advanced_options.h:13,
+                 from /usr/local/include/rocksdb/options.h:21,
+                 from /usr/local/include/rocksdb/block_cache_trace_writer.h:8,
+                 from /usr/local/include/rocksdb/db.h:20,
+                 from rocksdb/_rocksdb.cpp:782:
+/usr/local/include/rocksdb/data_structure.h: In constructor ‘rocksdb::SmallEnumSet<ENUM_TYPE, MAX_ENUMERATOR>::SmallEnumSet(ENUM_TYPE, TRest ...)’:
+/usr/local/include/rocksdb/data_structure.h:42:3: error: ‘constexpr’ constructor does not have empty body
+   42 |   }
+      |   ^
+In file included from /usr/local/include/rocksdb/block_cache_trace_writer.h:8,
+                 from /usr/local/include/rocksdb/db.h:20,
+                 from rocksdb/_rocksdb.cpp:782:
+/usr/local/include/rocksdb/options.h: At global scope:
+/usr/local/include/rocksdb/options.h:1584:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+ 1584 |   std::optional<size_t> merge_operand_count_threshold;
+      |        ^~~~~~~~
+/usr/local/include/rocksdb/options.h:1584:3: note: ‘std::optional’ is only available from C++17 onwards
+ 1584 |   std::optional<size_t> merge_operand_count_threshold;
+      |   ^~~
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pf_7rocksdb_8_rocksdb_21PyGenericFilterPolicy___cinit__(__pyx_obj_7rocksdb_8_rocksdb_PyGenericFilterPolicy*, PyObject*)’:
+rocksdb/_rocksdb.cpp:7142:184: error: invalid new-expression of abstract class type ‘py_rocks::FilterPolicyWrapper’
+ 7142 |     __pyx_t_7 = new py_rocks::FilterPolicyWrapper(__pyx_t_6, ((void *)__pyx_v_ob), __pyx_f_7rocksdb_8_rocksdb_create_filter_callback, __pyx_f_7rocksdb_8_rocksdb_key_may_match_callback);
+      |                                                                                                                                                                                        ^
+In file included from rocksdb/_rocksdb.cpp:787:
+rocksdb/cpp/filter_policy_wrapper.hpp:11:11: note:   because the following virtual functions are pure within ‘py_rocks::FilterPolicyWrapper’:
+   11 |     class FilterPolicyWrapper: public FilterPolicy {
+      |           ^~~~~~~~~~~~~~~~~~~
+In file included from rocksdb/_rocksdb.cpp:786:
+/usr/local/include/rocksdb/filter_policy.h:104:23: note:     ‘virtual const char* rocksdb::FilterPolicy::CompatibilityName() const’
+  104 |   virtual const char* CompatibilityName() const = 0;
+      |                       ^~~~~~~~~~~~~~~~~
+/usr/local/include/rocksdb/filter_policy.h:123:30: note:     ‘virtual rocksdb::FilterBitsBuilder* rocksdb::FilterPolicy::GetBuilderWithContext(const rocksdb::FilterBuildingContext&) const’
+  123 |   virtual FilterBitsBuilder* GetBuilderWithContext(
+      |                              ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/include/rocksdb/filter_policy.h:131:29: note:     ‘virtual rocksdb::FilterBitsReader* rocksdb::FilterPolicy::GetFilterBitsReader(const rocksdb::Slice&) const’
+  131 |   virtual FilterBitsReader* GetFilterBitsReader(
+      |                             ^~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘PyObject* __pyx_pf_7rocksdb_8_rocksdb_19PyBloomFilterPolicy_4create_filter(__pyx_obj_7rocksdb_8_rocksdb_PyBloomFilterPolicy*, PyObject*)’:
+rocksdb/_rocksdb.cpp:8326:16: error: ‘__pyx_t_7rocksdb_8_rocksdb_ConstFilterPolicy’ {aka ‘const class rocksdb::FilterPolicy’} has no member named ‘CreateFilter’
+ 8326 |     __pyx_t_6->CreateFilter(py_rocks::vector_data(__pyx_v_c_keys), ((int)__pyx_v_c_keys.size()), (&__pyx_v_dst));
+      |                ^~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘PyObject* __pyx_pf_7rocksdb_8_rocksdb_19PyBloomFilterPolicy_6key_may_match(__pyx_obj_7rocksdb_8_rocksdb_PyBloomFilterPolicy*, PyObject*, PyObject*)’:
+rocksdb/_rocksdb.cpp:8493:28: error: ‘__pyx_t_7rocksdb_8_rocksdb_ConstFilterPolicy’ {aka ‘const class rocksdb::FilterPolicy’} has no member named ‘KeyMayMatch’
+ 8493 |     __pyx_t_4 = __pyx_t_1->KeyMayMatch(__pyx_t_2, __pyx_t_3);
+      |                            ^~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pf_7rocksdb_8_rocksdb_22BlockBasedTableFactory___init__(__pyx_obj_7rocksdb_8_rocksdb_BlockBasedTableFactory*, PyObject*, PyLongObject*, PyObject*, __pyx_obj_7rocksdb_8_rocksdb_PyCache*, __pyx_obj_7rocksdb_8_rocksdb_PyCache*, PyObject*, PyObject*, PyObject*, PyObject*, PyObject*, PyObject*)’:
+rocksdb/_rocksdb.cpp:12900:27: error: ‘struct rocksdb::BlockBasedTableOptions’ has no member named ‘hash_index_allow_collision’
+12900 |     __pyx_v_table_options.hash_index_allow_collision = 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp:12920:27: error: ‘struct rocksdb::BlockBasedTableOptions’ has no member named ‘hash_index_allow_collision’
+12920 |     __pyx_v_table_options.hash_index_allow_collision = 0;
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp:13240:27: error: ‘struct rocksdb::BlockBasedTableOptions’ has no member named ‘block_cache_compressed’
+13240 |     __pyx_v_table_options.block_cache_compressed = ((struct __pyx_vtabstruct_7rocksdb_8_rocksdb_PyCache *)__pyx_v_block_cache_compressed->__pyx_vtab)->get_cache(__pyx_v_block_cache_compressed);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘PyObject* __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_24max_mem_compaction_level___get__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*)’:
+rocksdb/_rocksdb.cpp:20579:57: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘max_mem_compaction_level’; did you mean ‘max_compaction_bytes’?
+20579 |   __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->copts->max_mem_compaction_level); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1011, __pyx_L1_error)
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                         max_compaction_bytes
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_24max_mem_compaction_level_2__set__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*, PyObject*)’:
+rocksdb/_rocksdb.cpp:20642:24: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘max_mem_compaction_level’; did you mean ‘max_compaction_bytes’?
+20642 |   __pyx_v_self->copts->max_mem_compaction_level = __pyx_t_1;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                        max_compaction_bytes
+rocksdb/_rocksdb.cpp: In function ‘PyObject* __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_15soft_rate_limit___get__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*)’:
+rocksdb/_rocksdb.cpp:21311:55: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘soft_rate_limit’
+21311 |   __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->copts->soft_rate_limit); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1047, __pyx_L1_error)
+      |                                                       ^~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_15soft_rate_limit_2__set__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*, PyObject*)’:
+rocksdb/_rocksdb.cpp:21374:24: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘soft_rate_limit’
+21374 |   __pyx_v_self->copts->soft_rate_limit = __pyx_t_1;
+      |                        ^~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘PyObject* __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_15hard_rate_limit___get__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*)’:
+rocksdb/_rocksdb.cpp:21433:55: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘hard_rate_limit’
+21433 |   __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->copts->hard_rate_limit); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1053, __pyx_L1_error)
+      |                                                       ^~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_15hard_rate_limit_2__set__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*, PyObject*)’:
+rocksdb/_rocksdb.cpp:21496:24: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘hard_rate_limit’
+21496 |   __pyx_v_self->copts->hard_rate_limit = __pyx_t_1;
+      |                        ^~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘PyObject* __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_33rate_limit_delay_max_milliseconds___get__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*)’:
+rocksdb/_rocksdb.cpp:21555:66: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘rate_limit_delay_max_milliseconds’
+21555 |   __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_self->copts->rate_limit_delay_max_milliseconds); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1059, __pyx_L1_error)
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_33rate_limit_delay_max_milliseconds_2__set__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*, PyObject*)’:
+rocksdb/_rocksdb.cpp:21618:24: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘rate_limit_delay_max_milliseconds’
+21618 |   __pyx_v_self->copts->rate_limit_delay_max_milliseconds = __pyx_t_1;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘PyObject* __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_31purge_redundant_kvs_while_flush___get__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*)’:
+rocksdb/_rocksdb.cpp:21921:58: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘purge_redundant_kvs_while_flush’
+21921 |   __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->copts->purge_redundant_kvs_while_flush); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1077, __pyx_L1_error)
+      |                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pf_7rocksdb_8_rocksdb_19ColumnFamilyOptions_31purge_redundant_kvs_while_flush_2__set__(__pyx_obj_7rocksdb_8_rocksdb_ColumnFamilyOptions*, PyObject*)’:
+rocksdb/_rocksdb.cpp:21984:24: error: ‘struct rocksdb::ColumnFamilyOptions’ has no member named ‘purge_redundant_kvs_while_flush’
+21984 |   __pyx_v_self->copts->purge_redundant_kvs_while_flush = __pyx_t_1;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘PyObject* __pyx_pf_7rocksdb_8_rocksdb_7Options_26skip_log_error_on_recovery___get__(__pyx_obj_7rocksdb_8_rocksdb_Options*)’:
+rocksdb/_rocksdb.cpp:27514:57: error: ‘struct rocksdb::Options’ has no member named ‘skip_log_error_on_recovery’
+27514 |   __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->opts->skip_log_error_on_recovery); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1401, __pyx_L1_error)
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pf_7rocksdb_8_rocksdb_7Options_26skip_log_error_on_recovery_2__set__(__pyx_obj_7rocksdb_8_rocksdb_Options*, PyObject*)’:
+rocksdb/_rocksdb.cpp:27577:23: error: ‘struct rocksdb::Options’ has no member named ‘skip_log_error_on_recovery’
+27577 |   __pyx_v_self->opts->skip_log_error_on_recovery = __pyx_t_1;
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+rocksdb/_rocksdb.cpp: In function ‘int __pyx_pymod_exec__rocksdb(PyObject*)’:
+rocksdb/_rocksdb.cpp:54368:21: warning: ‘void PyEval_InitThreads()’ is deprecated [-Wdeprecated-declarations]
+54368 |   PyEval_InitThreads();
+      |   ~~~~~~~~~~~~~~~~~~^~
+In file included from /home/psychopunk_sage/.pyenv/versions/3.9.0/include/python3.9/Python.h:145,
+                 from rocksdb/_rocksdb.cpp:6:
+/home/psychopunk_sage/.pyenv/versions/3.9.0/include/python3.9/ceval.h:130:37: note: declared here
+  130 | Py_DEPRECATED(3.9) PyAPI_FUNC(void) PyEval_InitThreads(void);
+      |                                     ^~~~~~~~~~~~~~~~~~
+error: Setup script exited with error: command '/usr/bin/gcc' failed with exit code 1
