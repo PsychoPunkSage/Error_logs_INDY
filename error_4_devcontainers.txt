@@ -1,0 +1,1024 @@
+Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+                self.ptr.SeekToFirst()
+            check_status(self.ptr.status())
+    
+        cpdef seek_to_last(self):
+            with nogil:
+                self.ptr.SeekToLast()
+                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2233:20: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+                self.ptr.SeekToFirst()
+            check_status(self.ptr.status())
+    
+        cpdef seek_to_last(self):
+            with nogil:
+                self.ptr.SeekToLast()
+                                   ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2233:31: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.Seek(c_key)
+                             ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2239:25: Discarding owned Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.Seek(c_key)
+                             ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2239:25: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.Seek(c_key)
+                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2239:20: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.Seek(c_key)
+                             ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2239:25: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.Seek(c_key)
+                              ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2239:26: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek_for_prev(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.SeekForPrev(c_key)
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2245:32: Discarding owned Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek_for_prev(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.SeekForPrev(c_key)
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2245:32: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek_for_prev(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.SeekForPrev(c_key)
+                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2245:20: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek_for_prev(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.SeekForPrev(c_key)
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2245:32: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            check_status(self.ptr.status())
+    
+        cpdef seek_for_prev(self, key):
+            cdef Slice c_key = bytes_to_slice(key)
+            with nogil:
+                self.ptr.SeekForPrev(c_key)
+                                     ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2245:33: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    @cython.internal
+    cdef class KeysIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_key
+            with nogil:
+                c_key = self.ptr.key()
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2256:32: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    @cython.internal
+    cdef class KeysIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_key
+            with nogil:
+                c_key = self.ptr.key()
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2256:32: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    @cython.internal
+    cdef class KeysIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_key
+            with nogil:
+                c_key = self.ptr.key()
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2256:28: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    @cython.internal
+    cdef class KeysIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_key
+            with nogil:
+                c_key = self.ptr.key()
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2256:32: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    @cython.internal
+    cdef class ValuesIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_value
+            with nogil:
+                c_value = self.ptr.value()
+                                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2267:36: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    @cython.internal
+    cdef class ValuesIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_value
+            with nogil:
+                c_value = self.ptr.value()
+                                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2267:36: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    @cython.internal
+    cdef class ValuesIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_value
+            with nogil:
+                c_value = self.ptr.value()
+                                  ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2267:30: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    @cython.internal
+    cdef class ValuesIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_value
+            with nogil:
+                c_value = self.ptr.value()
+                                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2267:36: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    cdef class ItemsIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_key
+            cdef Slice c_value
+            with nogil:
+                c_key = self.ptr.key()
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2277:32: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    cdef class ItemsIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_key
+            cdef Slice c_value
+            with nogil:
+                c_key = self.ptr.key()
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2277:32: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    cdef class ItemsIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_key
+            cdef Slice c_value
+            with nogil:
+                c_key = self.ptr.key()
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2277:28: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    cdef class ItemsIterator(BaseIterator):
+        cdef object get_ob(self):
+            cdef Slice c_key
+            cdef Slice c_value
+            with nogil:
+                c_key = self.ptr.key()
+                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2277:32: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+        cdef object get_ob(self):
+            cdef Slice c_key
+            cdef Slice c_value
+            with nogil:
+                c_key = self.ptr.key()
+                c_value = self.ptr.value()
+                                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2278:36: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+        cdef object get_ob(self):
+            cdef Slice c_key
+            cdef Slice c_value
+            with nogil:
+                c_key = self.ptr.key()
+                c_value = self.ptr.value()
+                                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2278:36: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+        cdef object get_ob(self):
+            cdef Slice c_key
+            cdef Slice c_value
+            with nogil:
+                c_key = self.ptr.key()
+                c_value = self.ptr.value()
+                                  ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2278:30: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+        cdef object get_ob(self):
+            cdef Slice c_key
+            cdef Slice c_value
+            with nogil:
+                c_key = self.ptr.key()
+                c_value = self.ptr.value()
+                                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2278:36: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            if not self.it.ptr.Valid():
+                raise StopIteration()
+    
+            cdef object ret = self.it.get_ob()
+            with nogil:
+                self.it.ptr.Prev()
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2318:28: Discarding owned Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            if not self.it.ptr.Valid():
+                raise StopIteration()
+    
+            cdef object ret = self.it.get_ob()
+            with nogil:
+                self.it.ptr.Prev()
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2318:28: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            if not self.it.ptr.Valid():
+                raise StopIteration()
+    
+            cdef object ret = self.it.get_ob()
+            with nogil:
+                self.it.ptr.Prev()
+                           ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2318:23: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            if not self.it.ptr.Valid():
+                raise StopIteration()
+    
+            cdef object ret = self.it.get_ob()
+            with nogil:
+                self.it.ptr.Prev()
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2318:28: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef cpp_bool c_flush_before_backup
+    
+            c_flush_before_backup = flush_before_backup
+    
+            with nogil:
+                st = self.engine.CreateNewBackup(db.db, c_flush_before_backup)
+                                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2350:44: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef cpp_bool c_flush_before_backup
+    
+            c_flush_before_backup = flush_before_backup
+    
+            with nogil:
+                st = self.engine.CreateNewBackup(db.db, c_flush_before_backup)
+                                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2350:44: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef cpp_bool c_flush_before_backup
+    
+            c_flush_before_backup = flush_before_backup
+    
+            with nogil:
+                st = self.engine.CreateNewBackup(db.db, c_flush_before_backup)
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2350:28: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef cpp_bool c_flush_before_backup
+    
+            c_flush_before_backup = flush_before_backup
+    
+            with nogil:
+                st = self.engine.CreateNewBackup(db.db, c_flush_before_backup)
+                                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2350:44: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef cpp_bool c_flush_before_backup
+    
+            c_flush_before_backup = flush_before_backup
+    
+            with nogil:
+                st = self.engine.CreateNewBackup(db.db, c_flush_before_backup)
+                                                   ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2350:47: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef cpp_bool c_flush_before_backup
+    
+            c_flush_before_backup = flush_before_backup
+    
+            with nogil:
+                st = self.engine.CreateNewBackup(db.db, c_flush_before_backup)
+                                                        ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2350:52: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            c_backup_id = backup_id
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromBackup(
+                                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2364:48: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            c_backup_id = backup_id
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromBackup(
+                                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2364:48: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            c_backup_id = backup_id
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromBackup(
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2364:28: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            c_backup_id = backup_id
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromBackup(
+                                                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2364:48: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromBackup(
+                    c_backup_id,
+                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2365:16: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromBackup(
+                    c_backup_id,
+                    c_db_dir,
+                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2366:16: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            with nogil:
+                st = self.engine.RestoreDBFromBackup(
+                    c_backup_id,
+                    c_db_dir,
+                    c_wal_dir)
+                    ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2367:16: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromLatestBackup(c_db_dir, c_wal_dir)
+                                                          ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2380:54: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromLatestBackup(c_db_dir, c_wal_dir)
+                                                          ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2380:54: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromLatestBackup(c_db_dir, c_wal_dir)
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2380:28: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromLatestBackup(c_db_dir, c_wal_dir)
+                                                          ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2380:54: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromLatestBackup(c_db_dir, c_wal_dir)
+                                                           ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2380:55: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            c_db_dir = path_to_string(db_dir)
+            c_wal_dir = path_to_string(wal_dir)
+    
+            with nogil:
+                st = self.engine.RestoreDBFromLatestBackup(c_db_dir, c_wal_dir)
+                                                                     ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2380:65: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            check_status(st)
+    
+        def stop_backup(self):
+            with nogil:
+                self.engine.StopBackup()
+                                      ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2386:34: Discarding owned Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            check_status(st)
+    
+        def stop_backup(self):
+            with nogil:
+                self.engine.StopBackup()
+                                      ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2386:34: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            check_status(st)
+    
+        def stop_backup(self):
+            with nogil:
+                self.engine.StopBackup()
+                           ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2386:23: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+            check_status(st)
+    
+        def stop_backup(self):
+            with nogil:
+                self.engine.StopBackup()
+                                      ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2386:34: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef uint32_t c_num_backups_to_keep
+    
+            c_num_backups_to_keep = num_backups_to_keep
+    
+            with nogil:
+                st = self.engine.PurgeOldBackups(c_num_backups_to_keep)
+                                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2395:44: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef uint32_t c_num_backups_to_keep
+    
+            c_num_backups_to_keep = num_backups_to_keep
+    
+            with nogil:
+                st = self.engine.PurgeOldBackups(c_num_backups_to_keep)
+                                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2395:44: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef uint32_t c_num_backups_to_keep
+    
+            c_num_backups_to_keep = num_backups_to_keep
+    
+            with nogil:
+                st = self.engine.PurgeOldBackups(c_num_backups_to_keep)
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2395:28: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef uint32_t c_num_backups_to_keep
+    
+            c_num_backups_to_keep = num_backups_to_keep
+    
+            with nogil:
+                st = self.engine.PurgeOldBackups(c_num_backups_to_keep)
+                                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2395:44: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef uint32_t c_num_backups_to_keep
+    
+            c_num_backups_to_keep = num_backups_to_keep
+    
+            with nogil:
+                st = self.engine.PurgeOldBackups(c_num_backups_to_keep)
+                                                 ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2395:45: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef backup.BackupID c_backup_id
+    
+            c_backup_id = backup_id
+    
+            with nogil:
+                st = self.engine.DeleteBackup(c_backup_id)
+                                             ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2405:41: Coercion from Python not allowed without the GIL
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef backup.BackupID c_backup_id
+    
+            c_backup_id = backup_id
+    
+            with nogil:
+                st = self.engine.DeleteBackup(c_backup_id)
+                                             ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2405:41: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef backup.BackupID c_backup_id
+    
+            c_backup_id = backup_id
+    
+            with nogil:
+                st = self.engine.DeleteBackup(c_backup_id)
+                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2405:28: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef backup.BackupID c_backup_id
+    
+            c_backup_id = backup_id
+    
+            with nogil:
+                st = self.engine.DeleteBackup(c_backup_id)
+                                             ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2405:41: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+            cdef backup.BackupID c_backup_id
+    
+            c_backup_id = backup_id
+    
+            with nogil:
+                st = self.engine.DeleteBackup(c_backup_id)
+                                              ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2405:42: Converting to Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+        def get_backup_info(self):
+            cdef vector[backup.BackupInfo] backup_info
+    
+            with nogil:
+                self.engine.GetBackupInfo(cython.address(backup_info))
+                                         ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2413:37: Discarding owned Python object not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+        def get_backup_info(self):
+            cdef vector[backup.BackupInfo] backup_info
+    
+            with nogil:
+                self.engine.GetBackupInfo(cython.address(backup_info))
+                                         ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2413:37: Calling gil-requiring function not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+        def get_backup_info(self):
+            cdef vector[backup.BackupInfo] backup_info
+    
+            with nogil:
+                self.engine.GetBackupInfo(cython.address(backup_info))
+                           ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2413:23: Accessing Python attribute not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+        def get_backup_info(self):
+            cdef vector[backup.BackupInfo] backup_info
+    
+            with nogil:
+                self.engine.GetBackupInfo(cython.address(backup_info))
+                                         ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2413:37: Constructing Python tuple not allowed without gil
+    
+    Error compiling Cython file:
+    ------------------------------------------------------------
+    ...
+    
+        def get_backup_info(self):
+            cdef vector[backup.BackupInfo] backup_info
+    
+            with nogil:
+                self.engine.GetBackupInfo(cython.address(backup_info))
+                                                ^
+    ------------------------------------------------------------
+    
+    rocksdb/_rocksdb.pyx:2413:44: Converting to Python object not allowed without gil
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/tmp/pip-install-zhq72zdv/python-rocksdb/setup.py", line 21, in <module>
+        setup(
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/__init__.py", line 153, in setup
+        return distutils.core.setup(**attrs)
+      File "/usr/lib/python3.8/distutils/core.py", line 148, in setup
+        dist.run_commands()
+      File "/usr/lib/python3.8/distutils/dist.py", line 966, in run_commands
+        self.run_command(cmd)
+      File "/usr/lib/python3.8/distutils/dist.py", line 985, in run_command
+        cmd_obj.run()
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/command/install.py", line 61, in run
+        return orig.install.run(self)
+      File "/usr/lib/python3.8/distutils/command/install.py", line 589, in run
+        self.run_command('build')
+      File "/usr/lib/python3.8/distutils/cmd.py", line 313, in run_command
+        self.distribution.run_command(command)
+      File "/usr/lib/python3.8/distutils/dist.py", line 985, in run_command
+        cmd_obj.run()
+      File "/usr/lib/python3.8/distutils/command/build.py", line 135, in run
+        self.run_command(cmd_name)
+      File "/usr/lib/python3.8/distutils/cmd.py", line 313, in run_command
+        self.distribution.run_command(command)
+      File "/usr/lib/python3.8/distutils/dist.py", line 985, in run_command
+        cmd_obj.run()
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/command/build_ext.py", line 79, in run
+        _build_ext.run(self)
+      File "/usr/lib/python3.8/distutils/command/build_ext.py", line 340, in run
+        self.build_extensions()
+      File "/usr/lib/python3.8/distutils/command/build_ext.py", line 449, in build_extensions
+        self._build_extensions_serial()
+      File "/usr/lib/python3.8/distutils/command/build_ext.py", line 474, in _build_extensions_serial
+        self.build_extension(ext)
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/command/build_ext.py", line 196, in build_extension
+        _build_ext.build_extension(self, ext)
+      File "/tmp/pip-install-zhq72zdv/python-rocksdb/.eggs/Cython-3.0.7-py3.8-linux-x86_64.egg/Cython/Distutils/build_ext.py", line 130, in build_extension
+        new_ext = cythonize(
+      File "/tmp/pip-install-zhq72zdv/python-rocksdb/.eggs/Cython-3.0.7-py3.8-linux-x86_64.egg/Cython/Build/Dependencies.py", line 1154, in cythonize
+        cythonize_one(*args)
+      File "/tmp/pip-install-zhq72zdv/python-rocksdb/.eggs/Cython-3.0.7-py3.8-linux-x86_64.egg/Cython/Build/Dependencies.py", line 1321, in cythonize_one
+        raise CompileError(None, pyx_file)
+    Cython.Compiler.Errors.CompileError: rocksdb/_rocksdb.pyx
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: /usr/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-zhq72zdv/python-rocksdb/setup.py'"'"'; __file__='"'"'/tmp/pip-install-zhq72zdv/python-rocksdb/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-lrnrpteu/install-record.txt --single-version-externally-managed --user --prefix= --compile --install-headers /home/vscode/.local/include/python3.8/python-rocksdb Check the logs for full command output.
